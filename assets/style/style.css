@@ -1,0 +1,89 @@
+.mainTitle {
+    font-family: 'Baloo 2', cursive;
+    font-size:18vh;
+    letter-spacing: -0.08em;
+}
+
+.header {
+    background-color: black;
+    height: 50vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    font-family: 'Baloo 2', cursive;
+    background-color: black;
+}
+
+.carousel {
+    width: 40rem;
+}
+
+.imageModal {
+
+    width: 15rem;
+}
+
+.colorOne {
+    background-color: red;
+    height: 100%;
+}
+
+.colorTwo {
+    background-color: green;
+    height: 100%;
+}
+
+.colorThree {
+    background-color: blue;
+    height: 100%;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    height: 3rem;
+}
+
+.descModal > img {
+    display: none;
+}
+
+.descCard{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.imgCar{
+    filter: brightness(35%);
+}
+
+.black {
+    background-color: black;
+    color: white;
+    background: black;
+}
+
+.white {
+    background-color: white;
+    color: black;
+    background: white;
+}
+
+@media screen and (max-width : 600px) {
+    .carousel {
+        width: 20rem;
+    }
+}
+
+
+@media screen and (max-width : 600px) {
+    .navbar {
+        background-color: black;
+    
+    }
+}
+
