@@ -41,17 +41,17 @@ require_once "../controllers/parameters-controller.php";
                 <ul class="navbar-nav container row">
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end ">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active" aria-current="views/pages.php" href="<?= $rewrite1 ?? "basket" ?>.html"><span class="text text-white"><?= $_COOKIE['flux1'] ?? "NBA" ?></span></a>
+                            <a class="menu nav-link active" aria-current="views/pages.php" href="<?= $arrayRewrite[0] ?? "basket" ?>.html"><span class="text text-white"><?= $_COOKIE['flux1'] ?? "NBA" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $rewrite2 ?? "football" ?>.html"><span class="text text-white"><?= $_COOKIE['flux2'] ?? "Ligue 1" ?></span></a>
+                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $arrayRewrite[1] ?? "football" ?>.html"><span class="text text-white"><?= $_COOKIE['flux2'] ?? "Ligue 1" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $rewrite3 ?? "paris-hippique" ?>.html"><span class="text text-white"><?= $_COOKIE['flux3'] ?? "Paris hippique" ?></span></a>
+                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $arrayRewrite[2] ?? "paris-hippique" ?>.html"><span class="text text-white"><?= $_COOKIE['flux3'] ?? "Paris hippique" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">
@@ -130,12 +130,12 @@ require_once "../controllers/parameters-controller.php";
 
         $z++ ?>
 
-        <div class="card mb-3 <?= isset($_COOKIE['darkmode']) ? ' black' : 'white' ?> border-0">
+        <div class="card mb-3 border-0">
             <!-- chaque carte est une actu  -->
-            <div class="row g-0">
+            <div class="row g-0 <?= isset($_COOKIE['darkmode']) ? ' black' : 'white' ?>">
                 <div class="col-md-4">
                     <div class="col-md-4 col-lg-12 d-flex align-items-center">
-                        <img src="<?= $item->enclosure['url'] ?>" class="img-fluid rounded-start" alt="...">
+                        <img src="<?= $item->enclosure['url'] ?>" class="img-fluid rounded" alt="...">
                     </div>
                 </div>
                 <div class="col-md-8">

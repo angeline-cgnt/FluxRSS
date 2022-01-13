@@ -73,6 +73,10 @@
     background: white;
 }
 
+.gif {
+    height: 17rem;
+}
+
 @media screen and (max-width : 600px) {
     .carousel {
         width: 20rem;

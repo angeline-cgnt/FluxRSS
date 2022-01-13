@@ -44,17 +44,17 @@ require "../controllers/parameters-controller.php";
 
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end ">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active" aria-current="page" href="<?= $rewrite1 ?? "basket" ?>.html"><span class="text text-white"><?= $_COOKIE['flux1'] ?? "NBA" ?></span></a>
+                            <a class="menu nav-link active" aria-current="page" href="<?= $arrayRewrite[0] ?? "basket" ?>.html"><span class="text text-white"><?= $_COOKIE['flux1'] ?? "NBA" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $rewrite2 ?? "football" ?>.html"><span class="text text-white"><?= $_COOKIE['flux2'] ?? "Ligue 1" ?></span></a>
+                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $arrayRewrite[1] ?? "football" ?>.html"><span class="text text-white"><?= $_COOKIE['flux2'] ?? "Ligue 1" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $rewrite3 ?? "paris-hippique" ?>.html"><span class="text text-white"><?= $_COOKIE['flux3'] ?? "Paris hippique" ?></span></a>
+                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $arrayRewrite[2] ?? "paris-hippique" ?>.html"><span class="text text-white"><?= $_COOKIE['flux3'] ?? "Paris hippique" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">

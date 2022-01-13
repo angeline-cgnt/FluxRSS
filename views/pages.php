@@ -41,17 +41,17 @@ require_once '../controllers/pages-controller.php';
                 <ul class="navbar-nav container row">
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end ">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active" aria-current="page" href="<?= $rewrite1 ?? "basket" ?>.html"><span class="text text-white"><?= $_COOKIE['flux1'] ?? "NBA" ?></span></a>
+                            <a class="menu nav-link active" aria-current="page" href="<?= $arrayRewrite[0] ?? "basket" ?>.html"><span class="text text-white"><?= $_COOKIE['flux1'] ?? "NBA" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $rewrite2 ?? "football" ?>.html"><span class="text text-white"><?= $_COOKIE['flux2'] ?? "Ligue 1" ?></span></a>
+                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $arrayRewrite[1] ?? "football" ?>.html"><span class="text text-white"><?= $_COOKIE['flux2'] ?? "Ligue 1" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $rewrite3 ?? "paris-hippique" ?>.html"><span class="text text-white"><?= $_COOKIE['flux3'] ?? "Paris hippique" ?></span></a>
+                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $arrayRewrite[2] ?? "paris-hippique" ?>.html"><span class="text text-white"><?= $_COOKIE['flux3'] ?? "Paris hippique" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">
@@ -74,10 +74,10 @@ require_once '../controllers/pages-controller.php';
     ?>
 
         <div class="pt-lg-5">
-            <div class="card mb-3 <?= isset($_COOKIE['darkmode']) ? ' black' : 'white' ?> border-0" style="max-width: 100vh;">
-                <div class="row g-0">
-                    <div class="col-md-4 d-flex align-items-center">
-                        <img src="<?= $item->enclosure['url'] ?>" class="img-fluid rounded-start" alt="...">
+            <div class="card mb-3 border-0">
+                <div class="row g-0 <?= isset($_COOKIE['darkmode']) ? ' black' : 'white' ?>">
+                    <div class="col-md-4 d-flex align-items-center <?= isset($_COOKIE['darkmode']) ? ' black' : 'white' ?>">
+                        <img src="<?= $item->enclosure['url'] ?>" class="img-fluid rounded" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body <?= isset($_COOKIE['darkmode']) ? ' black' : 'white' ?>">
@@ -101,19 +101,19 @@ require_once '../controllers/pages-controller.php';
             <div class="modal-dialog">
 
                 <div class="modal-content">
-                    <div class="modal-header row text-center">
+                    <div class="modal-header row text-center <?= isset($_COOKIE['darkmode']) ? ' black' : 'white' ?>">
                         <p class="modal-title col-lg-12" id="exampleModalLabel"><?= utf8_encode(strftime("%A %d %B", strtotime($item->pubDate))) ?></p>
                         </p>
                         <h5 class="modal-title col-lg-12" id="exampleModalLabel"><?= $item->title ?></h5>
 
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body <?= isset($_COOKIE['darkmode']) ? ' black' : 'white' ?>">
                         <div class="text-center">
                             <img src="<?= $item->enclosure['url'] ?>" alt="" class="imageModal">
                         </div>
                         <div class="text-center descModal"><?= $item->description ?></div>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer <?= isset($_COOKIE['darkmode']) ? ' black' : 'white' ?>">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                         <a href="<?= $item->link ?>"><button type="button" class="btn btn-secondary">Aller vers l'article</button></a>
                     </div>

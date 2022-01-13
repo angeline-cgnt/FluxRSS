@@ -38,11 +38,10 @@ if (!empty($_POST['submit4'])) {
     header("Refresh:0");
 }
 
-if (!empty($_COOKIE['url1'])) {
-    $url1rewrite = explode('/', $_COOKIE['url1']);
-    $rewrite1 = $url1rewrite[0];
-    $url2rewrite = explode('/', $_COOKIE['url2']);
-    $rewrite2 = $url2rewrite[0];
-    $url3rewrite = explode('/', $_COOKIE['url3']);
-    $rewrite3 = $url3rewrite[0];
+if (!empty($_COOKIE['url1'])) { 
+    $arrayCookieUrl = [$_COOKIE['url1'], $_COOKIE['url2'], $_COOKIE['url3']];
+    $arrayRewrite = [];
+        for($n=0; $n<3; $n++){
+            $arrayRewrite[$n] = explode('/', $arrayCookieUrl[$n])[0];
+}
 }
