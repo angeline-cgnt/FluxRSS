@@ -4,7 +4,7 @@ setlocale (LC_TIME, 'fr_FR.utf8','fra');
 
 $nbArt = 2;
 
-if (!empty($_COOKIE)) {
+if (!empty($_COOKIE['url1'])) {
     $url1 = "https://rmcsport.bfmtv.com/rss/". $_COOKIE['url1'];
     $rss1 = simplexml_load_file($url1);
     $article1 = $rss1->channel->item;

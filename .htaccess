@@ -1,1 +1,13 @@
 ErrorDocument 404 /404.php
+
+Options +FollowSymlinks
+RewriteEngine on
+
+#RewriteRule ^accueil.html$  /index.php [L]
+RewriteRule ^accueil.html$  views/home.php [L]
+RewriteRule ^parametres.html$  views/parameters.php [L]
+RewriteRule ^basket.html$  views/pages.php?url=basket/nba [L]
+RewriteRule ^football.html$  views/pages.php?url=football/ligue-1 [L]
+RewriteRule ^paris-hippique.html$  views/pages.php?url=paris-hippique [L]
+RewriteRule ^jeux-olympiques.html$  views/pages.php?url=jeux-olympiques [L]
+RewriteRule ^tennis.html$  views/pages.php?url=tennis [L]

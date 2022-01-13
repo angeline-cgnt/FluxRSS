@@ -12,4 +12,3 @@ if(!isset($_GET['url'])){
 $url = "https://rmcsport.bfmtv.com/rss/" . $theme;
 $rss = simplexml_load_file($url);
 $article = $rss -> channel -> item;
-

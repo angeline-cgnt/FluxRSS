@@ -24,7 +24,7 @@ require "../controllers/parameters-controller.php";
 
 
     <header class="header d-lg-block d-none m-auto">
-        <a href="home.php" class="text-decoration-none">
+        <a href="accueil.html" class="text-decoration-none">
             <h1 class="mainTitle fw-bold text-white text-center pt-5">Influx Sport</h1>
         </a>
     </header>
@@ -36,7 +36,7 @@ require "../controllers/parameters-controller.php";
             <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon text-white pt-1 pe-5">Menu</span>
             </button>
-            <a href="home.php" class="navbar-toggler text-white border border-dark d-flex d-lg-none text-decoration-none">Influx Sport</a>
+            <a href="accueil.html" class="navbar-toggler text-white border border-dark d-flex d-lg-none text-decoration-none">Influx Sport</a>
 
             <div class="collapse navbar-collapse text-start" id="navbarNav">
                 <ul class="navbar-nav container row">
@@ -44,17 +44,17 @@ require "../controllers/parameters-controller.php";
 
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end ">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active" aria-current="page" href="pages.php?url=<?= $_COOKIE['url1'] ?? "basket/nba" ?>"><span class="text text-white"><?= $_COOKIE['flux1'] ?? "" ?></span></a>
+                            <a class="menu nav-link active" aria-current="page" href="<?= $rewrite1 ?? "basket" ?>.html"><span class="text text-white"><?= $_COOKIE['flux1'] ?? "NBA" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active  text-white" aria-current="page" href="pages.php?url=<?= $_COOKIE['url2'] ?? "football/ligue-1" ?>"><span class="text text-white"><?= $_COOKIE['flux2'] ?? "" ?></span></a>
+                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $rewrite2 ?? "football" ?>.html"><span class="text text-white"><?= $_COOKIE['flux2'] ?? "Ligue 1" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">
                         <div class="text-start text-lg-center">
-                            <a class="menu nav-link active  text-white" aria-current="page" href="pages.php?url=<?= $_COOKIE['url3'] ?? "paris-hippique" ?>"><span class="text text-white"><?= $_COOKIE['flux3'] ?? "" ?></span></a>
+                            <a class="menu nav-link active  text-white" aria-current="page" href="<?= $rewrite3 ?? "paris-hippique" ?>.html"><span class="text text-white"><?= $_COOKIE['flux3'] ?? "Paris hippique" ?></span></a>
                         </div>
                     </li>
                     <li class="nav-item col-lg-3 d-lg-flex justify-content-lg-end">
@@ -148,7 +148,7 @@ require "../controllers/parameters-controller.php";
         </form>
     </div>
 
-    <form action="parameters.php" method="POST" class="pt-5 pb-5">
+    <form action="" method="POST" class="pt-5 pb-5">
 
         <div class="row m-auto pt-2">
             <div class="form-check form-switch col-4 text-end">
