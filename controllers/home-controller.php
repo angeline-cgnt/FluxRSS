@@ -4,6 +4,7 @@ setlocale (LC_TIME, 'fr_FR.utf8','fra');
 
 $nbArt = 2;
 
+//Création des variables selon les thématiques choisies pour récupérer les infos des flux rmcsport
 if (!empty($_COOKIE['url1'])) {
     $url1 = "https://rmcsport.bfmtv.com/rss/". $_COOKIE['url1'];
     $rss1 = simplexml_load_file($url1);
@@ -32,7 +33,7 @@ if (!empty($_COOKIE['url1'])) {
     $article3 = $rss3->channel->item;
 }
 
-
+//Création d'un tableau comportant les articles à afficher sur la page d'accueil selon les paramètres de l'utilisateur
 $arrayArt = [];
 
 for ($i = 0; $i < $nbArt; $i++) {

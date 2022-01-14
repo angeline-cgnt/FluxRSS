@@ -10,6 +10,7 @@ $arrayChoice = [
 
 $error = [];
 
+//Création des cookies selon les paramètres choisis par l'utilisateur
 if (isset($_POST['submit'])) {
     if (isset($_POST['flux']) && count($_POST['flux']) == 3) {
         $i = 1;
@@ -25,7 +26,7 @@ if (isset($_POST['submit'])) {
     }
 }
 
-
+// Création des cookies mode dark ou light
 if (!empty($_POST['submit3'])) {
     setcookie('normal', 1, time() - 1, '/');
     setcookie('darkmode', 2, time() + 3600, '/');
@@ -38,6 +39,7 @@ if (!empty($_POST['submit4'])) {
     header("Refresh:0");
 }
 
+//Tableau de variables utilisées pour la réécriture des URL pages.php
 if (!empty($_COOKIE['url1'])) { 
     $arrayCookieUrl = [$_COOKIE['url1'], $_COOKIE['url2'], $_COOKIE['url3']];
     $arrayRewrite = [];
